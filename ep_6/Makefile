@@ -3,7 +3,6 @@ GIT_TAG := $(shell git rev-parse --short HEAD)
 all: build tag push
 
 build:
-	cd ep_6
 	docker build -t image -f Dockerfile .
 
 tag:
