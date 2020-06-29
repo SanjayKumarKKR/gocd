@@ -3,7 +3,6 @@ GIT_TAG := $(shell git rev-parse --short HEAD)
 all: build tag push
 
 build:
-	RUN echo "export PATH=$PATH"
 	docker build .
 
 tag:
