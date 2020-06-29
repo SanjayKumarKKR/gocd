@@ -3,6 +3,9 @@ GIT_TAG := $(shell git rev-parse --short HEAD)
 all: build tag push
 
 build:
+ifeq ($(OS),Windows_NT)
+    del /s *.o *.d *.elf *.map *.log
+endif
 	docker build .
 
 tag:
