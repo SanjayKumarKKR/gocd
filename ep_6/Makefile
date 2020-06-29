@@ -3,7 +3,7 @@ GIT_TAG := $(shell git rev-parse --short HEAD)
 all: build tag push
 
 build:
-	docker build -f Dockerfile
+	docker build .
 
 tag:
 	docker tag sanjay:latest 966166518746.dkr.ecr.us-east-1.amazonaws.com/sanjay:latest
